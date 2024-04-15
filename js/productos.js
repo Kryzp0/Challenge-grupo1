@@ -29,13 +29,17 @@ let zapatillasPorCheck = (array, arrayChecks) => {
         return array.filter(zapatilla => arrayChecks.includes(zapatilla.category))
     }
 }
+
 let zapatillasPorTexto = (array, textoIngresado) => {
     if (!textoIngresado) {
         return array;
     } else {
-        return array.filter(zapatilla => zapatilla.name.toLowerCase().includes(textoIngresado));
+        let palabrasClave = textoIngresado.split(" ").filter(palabra => palabra.trim() !== ""); // Separar las palabras clave ingresadas
+        return array.filter(zapatilla => palabrasClave.every(palabra => zapatilla.name.toLowerCase().includes(palabra.toLowerCase()))) 
+        // Verificar si todas las palabras clave están presentes en el nombre de la zapatilla
     }
-}
+};
+
 
 let renderCard = (array, contenedor) => {
     contenedor.innerHTML = ''

@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
+<style>
+    :root {
+        -color1: #B3C8CF;
+        -color2: #BED7DC;
+        -color3: #F1EEDC;
+        -color4: #E5DDC5;
+    }
+</style>
 <body>
+    <header></header>
+    <main>
+        <section class="flex justify-center items-center">
+            <label class="text-gray-700">Estilo de vida
+                <input type="checkbox">
+            </label>
+            <label class="text-gray-700 p-2">Runing
+                <input type="checkbox">
+            </label>
+            <label class="text-gray-700 p-2">Entrenamiento
+                <input type="checkbox">
+            </label>
+            <label class="text-gray-700 p-2">Competición
+                <input type="checkbox">
+            </label>
+            <label class="text-gray-700 p-2">Baloncesto
+                <input type="checkbox">
+            </label>
+            <label class="text-gray-700 p-2">Atletismo
+                <input type="checkbox">
+            </label>
+            <input class="m-2 rounded bg-gray-800" type="text">
+        </section>
+        <div class="bg-[#B3C8CF] text-gray-300 w-52 rounded-2xl overflow-hidden">
+            <img class=" w-full h-28 rounded object-cover" src=${zapatillas.image}/>
+            <div class="px-6 py-6">    
+            <h3 class="text-xl mb-2 text-[#000000]">${zapatillas.name}</h3>
+            <p class="text-sm text-[#000000] line-clamp-4">${zapatillas.description}</p>
+            <p>${zapatillas.price}</p>
+            <a class="py-2 px-3 rounded-lg ml-auto block text-[#000000]" href="#########${zapatillas.id}">Ver mas</a> 
+            </div>
+        </div>
+    </main>
+    <footer></footer>
     
 </body>
 </html>

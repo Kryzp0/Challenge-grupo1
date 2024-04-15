@@ -1,4 +1,4 @@
-{
+let zapatillas = {
   "products": [
     {
       "id": 1,

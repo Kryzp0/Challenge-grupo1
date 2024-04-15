@@ -61,7 +61,9 @@ let renderCheckbox = (array, contenedor) => {
 let createCard = objeto => `<div class="flex flex-col border border-black">
 <h3>${objeto.name}</h3>
 <p>${objeto.category}</p>
-</div>`
+${objeto.cantidad < 5 ? `<p>Últimas unidades!</p>` : ''}
+</div>`;
+
 
 
 let crearCheckbox = nombre => `<label>${nombre}

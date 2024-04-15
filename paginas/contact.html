@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
+    <style>
+        :root {
+            -color1: #B3C8CF;
+            -color2: #BED7DC;
+            -color3: #F1EEDC;
+            -color4: #E5DDC5;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 </head>
+
 <body>
+    <header class="flex flex-wrap bg-[#B3C8CF] w-full justify-between items-center md:relative p-2 md:pb-12 ">
+        <div class="flex justify-center items-center ml-8 p-4 w-full lg:w-[80%]">
+            <h1 class="font-bold text-4xl w-1/3 text-center mr-4">NAIKI</h1>
+            <img class="w-[25vh] h-[25vh]" src="./assets/facebook_profile_image.png" alt="icono de la pagina">
     
+        </div>
+        <div class="flex flex-col md:flex-row md:absolute md:gap-2 md:-bottom-8 md:right-2 md:w-1/2 p-4 w-full" >
+            <a class="rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center md:" href="#">Home</a>
+            <a class="rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center my-2 md:my-0" href="./paginas/products.html">Products</a>
+            <a class="rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center md:" href="./paginas/contact.html">Contact</a>
+        </div>
+    </header>
+    <main class="flex items-center justify-center bg-[#F1EEDC]">
+
+        <form id="form" class="flex flex-col">
+            <fieldset class="border border-4 border-black p-5 gap-1 flex flex-col bg-[#E5DDC5]">
+                <legend>Datos de contacto:</legend>
+                <div>
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Inserte nombre" class="mb-2">
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Inserte su apellido" class="mb-2">
+                </div>
+                <label for="tel">Telefono:</label>
+                <input type="tel" id="tel" name="tel" placeholder="agregue su número" class="mb-2">
+
+                <label for="email">Correo electronico</label>
+                <input type="email" name="email" placeholder="ej:mindhub@gmail.com">
+
+                <label for="comentario">Comentarios:</label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="50" class="mb-2"></textarea><br>
+
+                <button type="submit" id="button" class="border border-2 border-black w-auto max-w-[20%] bg-[#B3C8CF] self-center p-3">Enviar</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer class="w-full h-15 text-center font-extrabold bg-[#B3C8CF] p-4 md:text-lg md:h-1/5 flex justify-center flex-col items-center">
+        <p>&copy; All rigths reserved - Grupo #1 - MindHub Cohort-N°54</p>
+        <div class="flex mt-3 text-center justify-center items-center flex-col border border-black w-[100rem] max-w-[60%] p-5">
+            <p>Telefono: <a href="tel:+541155555555">+54 11 5555 5555</a></p>
+            <a href="mailto:naiki23@gmail.com"><p>Correo:<span class="text-blue-500">naiki23@gmail.com</span></p></a>
+            <a href="geo:-34.636407,-58.470862">Direccion: Av. Larrazábal 4880 4950, C1439 Cdad. Autónoma de Buenos Aires</a>
+        </div>
+    </footer>
+    <script src="../js/contact.js"></script>
 </body>
+
 </html>

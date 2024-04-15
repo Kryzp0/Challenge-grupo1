@@ -8,7 +8,8 @@ let zapatillas = {
       "image": "https://thelinecl.b-cdn.net/img/products/AH8050-002-1_1024.png",
       "category": "Running",
       "color": "Negro/Blanco",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  5
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@ let zapatillas = {
       "image": "https://images.stockx.com/images/Nike-React-Infinity-Run-Flyknit-3-White-Metallic-Silver-W.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1652378671",
       "category": "Running",
       "color": "Gris/Blanco",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@ let zapatillas = {
       "image": "https://nikeclprod.vtexassets.com/arquivos/ids/160788-800-800?v=637654399741130000&width=800&height=800&aspect=true",
       "category": "Estilo de vida",
       "color": "Blanco/Blanco",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 4,
@@ -38,7 +41,8 @@ let zapatillas = {
       "image": "https://falabella.scene7.com/is/image/Falabella/14794222_1?wid=800&hei=800&qlt=70",
       "category": "Running",
       "color": "Azul/Amarillo",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 5,
@@ -48,7 +52,8 @@ let zapatillas = {
       "image": "https://home.ripley.cl/store/Attachment/WOP/D317/2000388872136/2000388872136-2.jpg",
       "category": "Running",
       "color": "Azul/Blanco",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 6,
@@ -58,7 +63,8 @@ let zapatillas = {
       "image": "https://cdn-images.farfetch-contents.com/12/37/83/18/12378318_24022887_1000.jpg",
       "category": "Estilo de vida",
       "color": "Plateado/Negro",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 7,
@@ -68,7 +74,8 @@ let zapatillas = {
       "image": "https://falabella.scene7.com/is/image/Falabella/15313345_1?wid=800&hei=800&qlt=70",
       "category": "Entrenamiento",
       "color": "Negro/Blanco",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 8,
@@ -78,7 +85,8 @@ let zapatillas = {
       "image": "https://storage.googleapis.com/ssr_uk/products/a29fec3afba34e5558afded7333f2207.jpg",
       "category": "Running",
       "color": "Gris/Blanco",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 9,
@@ -88,7 +96,8 @@ let zapatillas = {
       "image": "https://nikeclprod.vtexassets.com/arquivos/ids/835697-800-800?v=638327406311330000&width=800&height=800&aspect=true",
       "category": "Estilo de vida",
       "color": "Negro/Azul",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 10,
@@ -98,7 +107,8 @@ let zapatillas = {
       "image": "https://s1.dswcdn.com/uploads/Nike_Other_Shoes/Nike_ZoomX_Invincible_Run_Flyknit_Blue_Orbit_Lime_Glow_Football_Grey_CT2228-401.jpg",
       "category": "Running",
       "color": "Azul/Blanco",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 11,
@@ -108,7 +118,8 @@ let zapatillas = {
       "image": "https://cdn-images.farfetch-contents.com/20/40/46/90/20404690_50336566_1000.jpg",
       "category": "Competición",
       "color": "Verde/Negro",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 12,
@@ -118,7 +129,8 @@ let zapatillas = {
       "image": "https://nikeclprod.vtexassets.com/arquivos/ids/271587-800-800?v=637771710351800000&width=800&height=800&aspect=true",
       "category": "Estilo de vida",
       "color": "Blanco/Negro",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 13,
@@ -128,7 +140,8 @@ let zapatillas = {
       "image": "https://falabella.scene7.com/is/image/Falabella/126677332_1?wid=800&hei=800&qlt=70",
       "category": "Baloncesto",
       "color": "Blanco/Negro",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 14,
@@ -138,7 +151,8 @@ let zapatillas = {
       "image": "https://images-cdn.ubuy.co.id/655530299afbbc74f2107bf5-nike-big-kids-zoom-freak-2-basketball.jpg",
       "category": "Baloncesto",
       "color": "Negro/Blanco",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 15,
@@ -148,7 +162,8 @@ let zapatillas = {
       "image": "https://www.runningxpert.com/media/catalog/product/cache/ed1b3c59211d8cf1c9523654e2efd698/n/i/nike_renew_run_3_.jpg",
       "category": "Running",
       "color": "Negro/Gris",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 16,
@@ -158,7 +173,8 @@ let zapatillas = {
       "image": "https://bikila.com/32375-thickbox_default/nike-air-zoom-structure-24.jpg",
       "category": "Running",
       "color": "Azul/Blanco",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 17,
@@ -168,7 +184,8 @@ let zapatillas = {
       "image": "https://image.goat.com/transform/v1/attachments/product_template_pictures/images/041/423/774/original/CD4385_001.png.png?action=crop&width=750",
       "category": "Atletismo",
       "color": "Verde/Negro",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 18,
@@ -178,7 +195,8 @@ let zapatillas = {
       "image": "https://nikeclprod.vtexassets.com/arquivos/ids/770691-800-800?v=638253939316500000&width=800&height=800&aspect=true",
       "category": "Estilo de vida",
       "color": "Blanco/Azul",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 19,
@@ -188,7 +206,8 @@ let zapatillas = {
       "image": "https://i.ebayimg.com/images/g/4EkAAOSwv65hcEzv/s-l1600.jpg",
       "category": "Running",
       "color": "Amarillo/Negro",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     },
     {
       "id": 20,
@@ -198,7 +217,8 @@ let zapatillas = {
       "image": "https://s1.dswcdn.com/uploads/Nike_Air_Max_Shoes/Air_Max_2090/Nike_Air_Max_2090_Black_Wolf_Grey_Anthracite_White_BV9977-001.jpg",
       "category": "Estilo de vida",
       "color": "Negro/Gris",
-      "sizes": ["US 7", "US 8", "US 9", "US 10"]
+      "sizes": ["US 7", "US 8", "US 9", "US 10"],
+      "cantidad":  10
     }
   ],
   "categories": [

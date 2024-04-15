@@ -35,7 +35,7 @@ let zapatillasPorTexto = (array, textoIngresado) => {
         return array;
     } else {
         let palabrasClave = textoIngresado.split(" ").filter(palabra => palabra.trim() !== ""); // Separar las palabras clave ingresadas
-        return array.filter(zapatilla => palabrasClave.every(palabra => zapatilla.name.toLowerCase().includes(palabra.toLowerCase()))) 
+        return array.filter(zapatilla => palabrasClave.every(palabra => zapatilla.name.toLowerCase().includes(palabra.toLowerCase())))
         // Verificar si todas las palabras clave están presentes en el nombre de la zapatilla
     }
 };
@@ -44,8 +44,8 @@ let zapatillasPorTexto = (array, textoIngresado) => {
 let renderCard = (array, contenedor) => {
     contenedor.innerHTML = ''
     let template = ''
-if (array.length != 0) {
-        array.forEach(element =>  template+=createCard(element))
+    if (array.length != 0) {
+        array.forEach(element => template += createCard(element))
     } else {
         template = '<h2>Lo sentimos, no encontramos productos que coincidan con tus filtros de búsqueda.</h2>'
     }
@@ -54,21 +54,26 @@ if (array.length != 0) {
 
 let renderCheckbox = (array, contenedor) => {
     let template = ''
-    array.forEach(element =>  template += crearCheckbox(element));
+    array.forEach(element => template += crearCheckbox(element));
     contenedor.innerHTML = template
 }
 
-let createCard = objeto => `<div class="flex flex-col border border-black">
-<h3>${objeto.name}</h3>
-<p>${objeto.category}</p>
+let createCard = objeto => `<div class="bg-[#B3C8CF] text-gray-300 w-52 rounded-2xl overflow-hidden">
+<img class=" w-full h-28 rounded object-cover" src=${objeto.image}/>
+<div class="px-6 py-6">    
+<h3 class="text-xl mb-2 text-[#000000]">${objeto.name}</h3>
+<p class="text-sm text-[#000000] line-clamp-4">${objeto.description}</p>
+<p>${objeto.price}$</p>
 ${objeto.cantidad < 5 ? `<p>Últimas unidades!</p>` : ''}
-</div>`;
+<a class="py-2 px-3 rounded-lg ml-auto block text-[#000000]" href="./details.html?id=${objeto.id}">Ver mas</a> 
+</div>
+</div>`
 
 
 
-let crearCheckbox = nombre => `<label>${nombre}
+let crearCheckbox = nombre => `<label class="text-gray-700">${nombre}
 <input type="checkbox" name="${nombre}" value="${nombre}">
 </label>`
 
-renderCard(productos,contenedor)
-renderCheckbox(categorias,contenedorCheckboxs)
+renderCard(productos, contenedor)
+renderCheckbox(categorias, contenedorCheckboxs)

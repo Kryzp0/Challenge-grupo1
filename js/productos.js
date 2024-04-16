@@ -7,6 +7,7 @@ let botonAbrirCarrito = document.getElementById("abrirCarrito");
 let botonCerrarCarrito = document.getElementById("cerrarCarrito");
 let listaCarrito = document.getElementById("listaCarrito");
 let valorTotal = document.getElementById("total")
+let botonComprar = document.getElementById("botonComprar")
 
 let productos = zapatillas.products
 let categorias = zapatillas.categories.map(categoria => categoria.name)
@@ -67,15 +68,17 @@ let renderCheckbox = (array, contenedor) => {
     contenedor.className = "flex flex-wrap justify-center items-center mt-8"
 }
 
-let crearTarjeta = objeto => `<div class="flex flex-col relative bg-[#B3C8CF] text-gray-300 w-52 rounded-2xl overflow-hidden">
+let crearTarjeta = objeto => `<div class="flex flex-col relative bg-[#B3C8CF] text-gray-300 w-52 h-96 rounded-2xl overflow-hidden items-center">
 <img class=" w-full h-28 rounded object-cover" src=${objeto.image}>
-<div class="px-6 py-6">    
-<h3 class="text-xl mb-2 text-[#000000]">${objeto.name}</h3>
+<div class="px-4 py-6 flex flex-col items-center justify-between">    
+<h3 class="text-lg mb-2 text-[#000000] text-center">${objeto.name}</h3>
 <p class="text-sm text-[#000000] line-clamp-4">${objeto.category}</p>
 <p class="bg-gray-800 text-[#F1EEDC] w-12 text-center rounded">${objeto.price}$</p>
-${objeto.cantidad < 5 ? `<p>Últimas unidades!</p>` : ''}
-<button class="bg-[#007bff] text-white px-[10px] py-[5px]" data-id="${objeto.id}">Agregar al Carrito</button>
-<a class="py-2 px-3 rounded-lg ml-auto block text-[#000000] mt-auto" href="./details.html?id=${objeto.id}">Ver mas</a> 
+${objeto.cantidad < 5 ? `<div class="bg-red-500 text-white text-lg rounded-2xl p-2"><p>Últimas unidades!</p></div>` : ''}
+</div>
+<div class="flex flex-col mt-auto items-center w-[90%] py-2">
+<button class="bg-[#007bff] text-white px-[10px] py-[5px] hover:bg-[#0056b3] w-[90%] mt-auto" data-id="${objeto.id}">Agregar al Carrito</button>
+<a class="py-2 px-3 rounded-lg ml-auto block text-[#000000] mt-auto py-2" href="./details.html?id=${objeto.id}">Ver mas</a>
 </div>
 </div>`
 
@@ -83,10 +86,11 @@ let productoID = (array, id) => array.find(producto => producto.id == id)
 
 let añadirACarrito = objeto => {
     let carritoItem = document.createElement("li");
+    carritoItem.className = "text-sm flex flex-col border border-black ";
     carritoItem.innerText = `${objeto.name} - $${objeto.price}`;
 
     let removeButton = document.createElement("button");
-    removeButton.className = "bg-red-500 text-white px-[10px] py-[5px] hover:bg-red-600";
+    removeButton.className = "bg-red-500 text-white px-[5px] py-[2.5px] hover:bg-red-600";
     removeButton.setAttribute("data-id", objeto.id);
     removeButton.innerText = "Eliminar";
     removeButton.addEventListener("click", (e) => {
@@ -119,6 +123,24 @@ contenedor.addEventListener('click', (e) => {
         localStorage.setItem('carritoIDs', JSON.stringify(carritoIDs));
     }
 })
+
+botonComprar.addEventListener('click', (e) => {
+    comprarProductos()
+})
+
+let comprarProductos = () =>{
+    carritoIDs.forEach(id=> {
+        let producto = productoID(productos,id)
+        if (producto && producto.cantidad > 0) {
+            producto.cantidad -= 1
+        }
+        console.log(producto);
+    })
+    carritoIDs=[]
+    console.log(carritoIDs);
+    localStorage.setItem('carritoIDs', JSON.stringify(carritoIDs));
+    renderCard(zapatillasPorTexto(zapatillasPorCheck(productos, categoriasSeleccionadas), textoIngresado), contenedor)
+}
 
 let crearCheckbox = nombre => `<label class="text-gray-700 p-4 m-2">${nombre}
 <input type="checkbox" name="${nombre}" value="${nombre}">

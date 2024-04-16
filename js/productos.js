@@ -65,11 +65,8 @@ let renderCheckbox = (array, contenedor) => {
     let template = ''
     array.forEach(element => template += crearCheckbox(element));
     contenedor.innerHTML = template
+    contenedor.className = "flex flex-wrap justify-center items-center mt-8"
 }
-
-let crearCheckbox = nombre => `<label class="text-gray-700 p-4">${nombre}
-<input type="checkbox" name="${nombre}" value="${nombre}">
-</label>`
 
 let crearTarjeta = objeto => `<div class="flex flex-col relative bg-[#B3C8CF] text-gray-300 w-52 h-96 rounded-2xl overflow-hidden items-center">
 <img class=" w-full h-28 rounded object-cover" src=${objeto.image}>
@@ -144,6 +141,10 @@ let comprarProductos = () =>{
     localStorage.setItem('carritoIDs', JSON.stringify(carritoIDs));
     renderCard(zapatillasPorTexto(zapatillasPorCheck(productos, categoriasSeleccionadas), textoIngresado), contenedor)
 }
+
+let crearCheckbox = nombre => `<label class="text-gray-700 p-4 m-2">${nombre}
+<input type="checkbox" name="${nombre}" value="${nombre}">
+</label>`
 
 botonAbrirCarrito.addEventListener("click", function () {
     carrito.classList.add("open");

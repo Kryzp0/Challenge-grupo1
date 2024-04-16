@@ -8,6 +8,7 @@ let botonCerrarCarrito = document.getElementById("cerrarCarrito");
 let listaCarrito = document.getElementById("listaCarrito");
 let valorTotal = document.getElementById("total")
 let botonComprar = document.getElementById("botonComprar")
+let botonVaciarCarrito = document.getElementById("botonVaciarCarrito")
 
 let productos = zapatillas.products
 let categorias = zapatillas.categories.map(categoria => categoria.name)
@@ -82,6 +83,10 @@ ${objeto.cantidad < 5 ? `<div class="bg-red-500 text-white text-lg rounded-2xl p
 </div>
 </div>`
 
+let crearCheckbox = nombre => `<label class="text-gray-700 p-4 m-2">${nombre}
+<input type="checkbox" name="${nombre}" value="${nombre}">
+</label>`
+
 let productoID = (array, id) => array.find(producto => producto.id == id)
 
 let añadirACarrito = objeto => {
@@ -124,27 +129,43 @@ contenedor.addEventListener('click', (e) => {
     }
 })
 
-botonComprar.addEventListener('click', (e) => {
-    comprarProductos()
-})
+botonComprar.addEventListener('click', (e) => comprarProductos())
 
-let comprarProductos = () =>{
-    carritoIDs.forEach(id=> {
-        let producto = productoID(productos,id)
+botonVaciarCarrito.addEventListener('click', (e) => vaciarCarrito())
+
+let comprarProductos = () => {
+    let hayProductoAgotado = false
+    let productoAgotado = ''
+    carritoIDs.forEach(id => {
+        let producto = productoID(productos, id)
         if (producto && producto.cantidad > 0) {
             producto.cantidad -= 1
+            console.log(producto);
         }
-        console.log(producto);
+        else {
+            hayProductoAgotado = true
+            productoAgotado = producto
+        }
     })
-    carritoIDs=[]
-    console.log(carritoIDs);
-    localStorage.setItem('carritoIDs', JSON.stringify(carritoIDs));
+    if (!hayProductoAgotado) {
+        vaciarCarrito()
+    }
+    else {
+        let avisoProductoAgotado = document.createElement("li")
+        avisoProductoAgotado.innerText = `El producto${productoAgotado.name} está agotado`
+        listaCarrito.appendChild(avisoProductoAgotado);
+    }
     renderCard(zapatillasPorTexto(zapatillasPorCheck(productos, categoriasSeleccionadas), textoIngresado), contenedor)
 }
 
-let crearCheckbox = nombre => `<label class="text-gray-700 p-4 m-2">${nombre}
-<input type="checkbox" name="${nombre}" value="${nombre}">
-</label>`
+let vaciarCarrito = () => {
+    carritoIDs = []
+    console.log(carritoIDs);
+    localStorage.setItem('carritoIDs', JSON.stringify(carritoIDs));
+    listaCarrito.innerHTML = ""
+    total = 0
+    valorTotal.innerText = `$${total.toFixed(2)}`;
+}
 
 botonAbrirCarrito.addEventListener("click", function () {
     carrito.classList.add("open");

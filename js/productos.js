@@ -2,8 +2,16 @@
 let contenedor = document.getElementById("contenedor")
 let contenedorCheckboxs = document.getElementById("contenedorCheckbox")
 let inputTexto = document.getElementById("search")
+let carrito = document.getElementById("carrito");
+let botonAbrirCarrito = document.getElementById("abrirCarrito");
+let botonCerrarCarrito = document.getElementById("cerrarCarrito");
+let listaCarrito = document.getElementById("listaCarrito");
+let valorTotal = document.getElementById("total")
+
 let productos = zapatillas.products
 let categorias = zapatillas.categories.map(categoria => categoria.name)
+let carritoIDs = JSON.parse(localStorage.getItem('carritoIDs')) || []
+let total = 0
 
 console.log(productos);
 console.log(categorias);
@@ -45,7 +53,7 @@ let renderCard = (array, contenedor) => {
     contenedor.innerHTML = ''
     let template = ''
     if (array.length != 0) {
-        array.forEach(element => template += createCard(element))
+        array.forEach(element => template += crearTarjeta(element))
     } else {
         template = '<h2>Lo sentimos, no encontramos productos que coincidan con tus filtros de búsqueda.</h2>'
     }
@@ -58,22 +66,79 @@ let renderCheckbox = (array, contenedor) => {
     contenedor.innerHTML = template
 }
 
-let createCard = objeto => `<div class="bg-[#B3C8CF] text-gray-300 w-52 rounded-2xl overflow-hidden">
-<img class=" w-full h-28 rounded object-cover" src=${objeto.image}/>
+let crearTarjeta = objeto => `<div class="flex flex-col relative bg-[#B3C8CF] text-gray-300 w-52 rounded-2xl overflow-hidden">
+<img class=" w-full h-28 rounded object-cover" src=${objeto.image}>
 <div class="px-6 py-6">    
 <h3 class="text-xl mb-2 text-[#000000]">${objeto.name}</h3>
-<p class="text-sm text-[#000000] line-clamp-4">${objeto.description}</p>
+<p class="text-sm text-[#000000] line-clamp-4">${objeto.category}</p>
 <p class="bg-gray-800 text-[#F1EEDC] w-12 text-center rounded">${objeto.price}$</p>
 ${objeto.cantidad < 5 ? `<p>Últimas unidades!</p>` : ''}
-<a class="py-2 px-3 rounded-lg ml-auto block text-[#000000]" href="./details.html?id=${objeto.id}">Ver mas</a> 
+<button class="bg-[#007bff] text-white px-[10px] py-[5px]" data-id="${objeto.id}">Agregar al Carrito</button>
+<a class="py-2 px-3 rounded-lg ml-auto block text-[#000000] mt-auto" href="./details.html?id=${objeto.id}">Ver mas</a> 
 </div>
 </div>`
 
+let productoID = (array, id) => array.find(producto => producto.id == id)
 
+let añadirACarrito = objeto => {
+    let carritoItem = document.createElement("li");
+    carritoItem.innerText = `${objeto.name} - $${objeto.price}`;
+
+    let removeButton = document.createElement("button");
+    removeButton.className = "bg-red-500 text-white px-[10px] py-[5px] hover:bg-red-600";
+    removeButton.setAttribute("data-id", objeto.id);
+    removeButton.innerText = "Eliminar";
+    removeButton.addEventListener("click", (e) => {
+        listaCarrito.removeChild(carritoItem);
+        total -= objeto.price;
+        valorTotal.innerText = total.toFixed(2);
+        let index = carritoIDs.indexOf(objeto.id.toString());
+        if (index > -1) {
+            // Eliminar solo esa ocurrencia del array carritoIDs
+            carritoIDs.splice(index, 1);
+            localStorage.setItem("carritoIDs", JSON.stringify(carritoIDs));
+        }
+    });
+
+    carritoItem.appendChild(removeButton);
+    listaCarrito.appendChild(carritoItem);
+
+    total += objeto.price;
+    valorTotal.innerText = `$${total.toFixed(2)}`;
+}
+
+contenedor.addEventListener('click', (e) => {
+    let target = e.target
+    let id = target.dataset.id
+    if (target.tagName == 'BUTTON') {
+        console.log("es un boton")
+        carritoIDs.push(id)
+        console.log(carritoIDs);
+        añadirACarrito(productoID(productos, id))
+        localStorage.setItem('carritoIDs', JSON.stringify(carritoIDs));
+    }
+})
 
 let crearCheckbox = nombre => `<label class="text-gray-700 p-4">${nombre}
 <input type="checkbox" name="${nombre}" value="${nombre}">
 </label>`
+
+botonAbrirCarrito.addEventListener("click", function () {
+    carrito.classList.add("open");
+});
+
+botonCerrarCarrito.addEventListener("click", function () {
+    carrito.classList.remove("open");
+});
+
+
+// Cargar productos del carrito al iniciar la página
+carritoIDs.forEach((id) => {
+    let producto = productoID(productos, id);
+    if (producto) {
+        añadirACarrito(producto);
+    }
+});
 
 renderCard(productos, contenedor)
 renderCheckbox(categorias, contenedorCheckboxs)

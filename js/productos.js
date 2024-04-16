@@ -64,6 +64,7 @@ let renderCheckbox = (array, contenedor) => {
     let template = ''
     array.forEach(element => template += crearCheckbox(element));
     contenedor.innerHTML = template
+    contenedor.className = "flex flex-wrap justify-center items-center mt-8"
 }
 
 let crearTarjeta = objeto => `<div class="flex flex-col relative bg-[#B3C8CF] text-gray-300 w-52 rounded-2xl overflow-hidden">
@@ -119,7 +120,7 @@ contenedor.addEventListener('click', (e) => {
     }
 })
 
-let crearCheckbox = nombre => `<label class="text-gray-700 p-4">${nombre}
+let crearCheckbox = nombre => `<label class="text-gray-700 p-4 m-2">${nombre}
 <input type="checkbox" name="${nombre}" value="${nombre}">
 </label>`
 

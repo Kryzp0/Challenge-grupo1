@@ -71,7 +71,7 @@ let crearTarjeta = objeto => `<div class="flex flex-col relative bg-[#B3C8CF] te
 <div class="px-6 py-6">    
 <h3 class="text-xl mb-2 text-[#000000]">${objeto.name}</h3>
 <p class="text-sm text-[#000000] line-clamp-4">${objeto.category}</p>
-<p>${objeto.price}$</p>
+<p class="bg-gray-800 text-[#F1EEDC] w-12 text-center rounded">${objeto.price}$</p>
 ${objeto.cantidad < 5 ? `<p>Últimas unidades!</p>` : ''}
 <button class="bg-[#007bff] text-white px-[10px] py-[5px]" data-id="${objeto.id}">Agregar al Carrito</button>
 <a class="py-2 px-3 rounded-lg ml-auto block text-[#000000] mt-auto" href="./details.html?id=${objeto.id}">Ver mas</a> 
@@ -119,7 +119,7 @@ contenedor.addEventListener('click', (e) => {
     }
 })
 
-let crearCheckbox = nombre => `<label class="text-gray-700">${nombre}
+let crearCheckbox = nombre => `<label class="text-gray-700 p-4">${nombre}
 <input type="checkbox" name="${nombre}" value="${nombre}">
 </label>`
 

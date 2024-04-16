@@ -63,7 +63,7 @@ let createCard = objeto => `<div class="bg-[#B3C8CF] text-gray-300 w-52 rounded-
 <div class="px-6 py-6">    
 <h3 class="text-xl mb-2 text-[#000000]">${objeto.name}</h3>
 <p class="text-sm text-[#000000] line-clamp-4">${objeto.description}</p>
-<p>${objeto.price}$</p>
+<p class="bg-gray-800 text-[#F1EEDC] w-12 text-center rounded">${objeto.price}$</p>
 ${objeto.cantidad < 5 ? `<p>Últimas unidades!</p>` : ''}
 <a class="py-2 px-3 rounded-lg ml-auto block text-[#000000]" href="./details.html?id=${objeto.id}">Ver mas</a> 
 </div>
@@ -71,7 +71,7 @@ ${objeto.cantidad < 5 ? `<p>Últimas unidades!</p>` : ''}
 
 
 
-let crearCheckbox = nombre => `<label class="text-gray-700">${nombre}
+let crearCheckbox = nombre => `<label class="text-gray-700 p-4">${nombre}
 <input type="checkbox" name="${nombre}" value="${nombre}">
 </label>`
 

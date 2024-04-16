@@ -9,9 +9,9 @@ let zapatillaSeleccionada = filtrarZapatilla(tennis, id)[0];
 // console.log(zapatillaSeleccionada);
 
 let asideCntnt = (shoe, nodo) => `
-<div class="flex flex-col justify-between items-center bg-[#BED7DC] text-gray-300 w-52 rounded-2xl w-[35%] border ml-2">
-   <img class=" w-full rounded-xl object-cover" src=${shoe.image}/>
-   <hr class="w-[80%] border-[3px] my-4">
+<div class="flex flex-col justify-between items-center w-full bg-[#BED7DC] text-gray-300 rounded-2xl border m-2  lg:w-[38%]">
+   <img class="w-full h-[400px] rounded-xl object-cover" src=${shoe.image}>
+   <hr class="w-[80%] border-[3px] my-4 md:mt-12">
    <div class="px-6 py-6">    
       <h3 class="font-extrabold text-2xl mb-2 text-[#000000]">${shoe.name}</h3>
       <p class="text-lg italic text-[#000000] line-clamp-4">${shoe.description}</p>
@@ -19,9 +19,10 @@ let asideCntnt = (shoe, nodo) => `
    </div>
 </div>
 
-<hr class="h-[80%] border-[3px] ml-2 my-4">
+<hr class="w-[30%] h-[2px] ml-2 my-4 lg:hidden">
 
-<div class="w-[60%] m-2 bg-[#BED7DC] p-2 rounded-md">
+
+<div class="w-full m-2 bg-[#BED7DC] p-2 rounded-md lg:w-[55%]">
    <table class="w-full p-2">        
       <tbody>
          <tr>
@@ -54,7 +55,7 @@ let asideCntnt = (shoe, nodo) => `
 let crearAside = (shoe, ctn, nodo) => {
    ctn.innerHTML = ''
    let aside = document.createElement("aside");
-   aside.className = "bg-[#B3C8CF] w-[80%] rounded-xl flex gap-2 justify-between items-center h-[50vh]";
+   aside.className = "flex flex-row flex-wrap bg-[#B3C8CF] w-[90%] rounded-xl gap-2 justify-center items-center my-8 md:w-[85%] md:my-16";
    aside.innerHTML = asideCntnt(shoe, nodo);
    ctn.appendChild(aside);
 }

@@ -16,6 +16,6 @@ formulario.addEventListener('submit', event => {
         }
         else{
         formulario.innerHTML = ''
-        formulario.innerHTML = `<h1>¡El formulario se ha enviado con exito!</h1>`
+        formulario.innerHTML = `<h1 class="h-[500px] text-3xl">¡El formulario se ha enviado con exito!</h1>`
     }
 })

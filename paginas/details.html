@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
     <style>
         :root {
@@ -19,15 +20,18 @@
     <title>Details</title>
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="flex flex-wrap bg-[#B3C8CF] w-full items-center md:relative p-2 md:pb-12">
-        <div class="flex justify-center items-center ml-8 p-4 w-full lg:w-[80%]">
-            <h1 class="font-bold text-4xl w-1/3 text-center mr-4">NAIKI</h1>
-            <img class="w-[25vh] h-[25vh]" src="../assets/facebook_profile_image.png" alt="icono de la pagina">    
+    <header class="flex flex-wrap bg-[#B3C8CF] w-full justify-between items-center md:relative pl-2 md:pb-12 bg-[url('https://img.freepik.com/foto-gratis/zapatilla-deporte-colores-pintando-pintura-aerosol-color-purpura_123827-23438.jpg')] bg-opacity-40 bg-no-repeat bg-cover bg-center">
+        <div class="flex justify-between items-center p-4 w-full lg:w-[80%] lg:ml-24">
+            <img class="w-[20vh] h-[20vh]" src="../assets/facebook_profile_image.png" alt="icono de la pagina">
+            <div class="flex flex-col items-center content-center ml-4">
+                <h1 class="font-bold text-4xl w-auto text-center mb-2 rounded-lg px-2 bg-[#F1EEDC]">NAIKI</h1>
+                <h3 class="italic text-sm text-center rounded-md bg-[#B3C8CF]">El mejor catálogo de zapatillas, a un click de distancia.</h3>
+            </div>
         </div>
-        <nav class="flex flex-col justify-end md:flex-row text-end md:absolute md:-bottom-8 md:right-0 md:gap-2 md:w-1/2 p-4 w-full" >
-            <a class="rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center md:" href="../index.html">Home</a>
-            <a class="rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center my-2 md:my-0" href="./products.html">Products</a>
-            <a class="rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center md:" href="./contact.html">Contact</a>
+        <nav class="flex flex-col mb-2 items-center gap-2 md:flex-row md:justify-end md:absolute  md:-bottom-6 md:right-2 md:w-1/2 px-4 w-full" >
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="../index.html">Home</a>
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="./products.html">Products</a>
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="./contact.html">Contact</a>
         </nav>
     </header>
     <main class="grow flex flex-wrap min-h-full bg-[#F1EEDC] pb-12 justify-center items-center" id="main">

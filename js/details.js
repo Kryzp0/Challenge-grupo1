@@ -10,7 +10,7 @@ let zapatillaSeleccionada = filtrarZapatilla(tennis, id)[0];
 
 let asideCntnt = (shoe, nodo) => `
 <div class="flex flex-col justify-between items-center w-full bg-[#BED7DC] text-gray-300 rounded-2xl border m-2  lg:w-[38%]">
-   <img class="w-full h-[400px] rounded-xl object-cover" src=${shoe.image}>
+   <img class="w-full h-[400px] rounded-xl object-contain" src=${shoe.image}>
    <hr class="w-[80%] border-[3px] my-4 md:mt-12">
    <div class="px-6 py-6">    
       <h3 class="font-extrabold text-2xl mb-2 text-[#000000]">${shoe.name}</h3>

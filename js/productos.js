@@ -69,17 +69,17 @@ let renderCheckbox = (array, contenedor) => {
     contenedor.className = "flex flex-wrap justify-center items-center mt-8"
 }
 
-let crearTarjeta = objeto => `<div class="flex flex-col relative bg-[#B3C8CF] text-gray-300 w-52 h-96 rounded-2xl overflow-hidden items-center">
+let crearTarjeta = objeto => `<div class="flex flex-col relative bg-[#B3C8CF] text-gray-300 w-52 h-96 rounded-2xl overflow-hidden items-center shadow-lg shadow-blue-400/50">
 <img class="w-full h-28 rounded object-cover" src="${objeto.image}">
 <div class="px-4 py-6 flex flex-col items-center justify-between">    
 <h3 class="text-lg mb-2 text-[#000000] text-center">${objeto.name}</h3>
-<p class="text-sm text-[#000000] line-clamp-4">${objeto.category}</p>
-<p class="bg-gray-800 text-[#F1EEDC] w-12 text-center rounded">${objeto.price}$</p>
+<p class=" text-sm text-[#000000] line-clamp-4">${objeto.category}</p>
 ${objeto.cantidad < 5 ? `<div class="bg-red-500 text-white text-lg rounded-2xl p-2"><p>Últimas unidades!</p></div>` : ''}
 </div>
 <div class="flex flex-col mt-auto items-center w-[90%] py-2">
-<button class="bg-[#007bff] text-white px-[10px] py-[5px] hover:bg-[#0056b3] w-[90%] mt-auto" data-id="${objeto.id}">Agregar al Carrito</button>
-<a class="py-2 px-3 rounded-lg ml-auto block text-[#000000] mt-auto py-2" href="./details.html?id=${objeto.id}">Ver mas</a>
+<p class="bg-gray-800 text-[#F1EEDC] w-12 text-center rounded relative m-2">$${objeto.price}</p>
+<button class="bg-[#007bff] text-white px-[10px] py-[5px] hover:bg-[#0056b3] w-[90%] mt-auto rounded" data-id="${objeto.id}">Agregar al Carrito</button>
+<a class="py-2 px-3 rounded-lg ml-auto block text-[#000000] mt-auto py-2 hover:text-[#08520e] " href="./details.html?id=${objeto.id}">Ver mas</a>
 </div>
 </div>`
 

@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <style>
+        :root {
+            -color1: #B3C8CF;
+            -color2: #BED7DC;
+            -color3: #F1EEDC;
+            -color4: #E5DDC5;
+        }
+    </style>
+    <title>Products</title>
 </head>
+
 <body>
-    
+    <header class="flex flex-wrap bg-[#B3C8CF] w-full justify-between items-center md:relative pl-2 md:pb-12 bg-[url('https://img.freepik.com/foto-gratis/zapatilla-deporte-colores-pintando-pintura-aerosol-color-purpura_123827-23438.jpg')] bg-opacity-40 bg-no-repeat bg-cover bg-center">
+        <div class="flex justify-between items-center p-4 w-full lg:w-[80%] lg:ml-24">
+            <img class="w-[20vh] h-[20vh]" src="../assets/facebook_profile_image.png" alt="icono de la pagina">
+            <div class="flex flex-col items-center content-center ml-4">
+                <h1 class="font-bold text-4xl w-auto text-center mb-2 rounded-lg px-2 bg-[#F1EEDC]">NAIKI</h1>
+                <h3 class="italic text-sm text-center rounded-md bg-[#B3C8CF]">El mejor catálogo de zapatillas, a un click de distancia.</h3>
+            </div>
+        </div>
+        <nav class="flex flex-col mb-2 items-center gap-2 md:flex-row md:justify-end md:absolute  md:-bottom-6 md:right-2 md:w-1/2 px-4 w-full" >
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="../index.html">Home</a>
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="#">Products</a>
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="w-full min-h-full bg-[#F1EEDC] pb-12">
+        <div class="z-10 max-w-[800px] mx-auto p-[20px]">
+            <button id="abrirCarrito" class="fixed top-[20px] z-10 right-[20px] bg-[#007bff] px-[20px] py-[10px] hover:bg-[#0056b3] text-white">Abrir Carrito</button>
+            <div id="carrito" class="cart z-20 flex flex-col overflow-y-scroll gap-4">
+                <h1>Carrito de Compras</h1>
+              <button id="cerrarCarrito" class="absolute top-[10px] right-[10px] text-xl bg-none">&times;</button>
+              <h2>Carrito</h2>
+              <ul id="listaCarrito" class="flex flex-col gap-4"></ul>
+              <h3>Total: <span id= total class="total">0</span></h3>
+              <button class="bg-[#007bff] text-white px-[10px] py-[5px] hover:bg-[#0056b3]" id="botonComprar">Comprar</button>
+              <button class="bg-red-500 text-white px-[5px] py-[2.5px] hover:bg-red-600" id="botonVaciarCarrito">Vacíar Carrito</button>
+            </div>
+        </div>
+        <section class="flex flex-wrap justify-center items-center">
+            <div id="contenedorCheckbox" class="m-4"></div>
+            <input id="search" class="w-[50%] mb-8 m-2 rounded bg[#E5DDC5] h-[2.5rem] text-black text-center" placeholder="Escribe aquí" type="text">
+        </section>
+        <section id="contenedor" class="flex justify-center flex-wrap gap-10"></section>
+        </div>
+    </main>
+    <footer class="w-full h-15 text-center font-extrabold bg-[#B3C8CF] p-4 md:text-lg ">
+        <p>&copy; All rigths reserved - Grupo #1 - MindHub Cohort-N°54</p>
+    </footer>
+<style>
+   /*  * {
+        border: 1px solid red;
+    } */
+</style>
+
+    <script src="../js/zapatillas.js"></script>
+    <script src="../js/productos.js"></script>
 </body>
+
 </html>

@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        :root {
+            -color1: #B3C8CF;
+            -color2: #BED7DC;
+            -color3: #F1EEDC;
+            -color4: #E5DDC5;
+            -color5: #000000;
+            -color6: #ffffff;
+        }
+    </style>
+    <title>HOME</title>
 </head>
-<body>
-    
+<body class="flex flex-col min-h-screen">
+    <header class="flex flex-wrap bg-[#B3C8CF] w-full justify-between items-center md:relative pl-2 md:pb-12 bg-[url('https://img.freepik.com/foto-gratis/zapatilla-deporte-colores-pintando-pintura-aerosol-color-purpura_123827-23438.jpg')] bg-opacity-40 bg-no-repeat bg-cover bg-center">
+        <div class="flex justify-between items-center p-4 w-full lg:w-[80%] lg:ml-24">
+            <img class="w-[20vh] h-[20vh]" src="./assets/facebook_profile_image.png" alt="icono de la pagina">
+            <div class="flex flex-col items-center content-center ml-4">
+                <h1 class="font-bold text-4xl w-auto text-center mb-2 rounded-lg px-2 bg-[#F1EEDC]">NAIKI</h1>
+                <h3 class="italic text-sm text-center rounded-md bg-[#B3C8CF]">El mejor catálogo de zapatillas, a un click de distancia.</h3>
+            </div>
+        </div>
+        <nav class="flex flex-col mb-2 items-center gap-2 md:flex-row md:justify-end md:absolute md:-bottom-6 md:right-2 md:w-1/2 px-4 w-full p-2" >
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="#">Home</a>
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="./paginas/products.html">Products</a>
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="./paginas/contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="flex grow w-full min-h-full bg-[#F1EEDC] pb-12 md:pb-0">
+        <aside class="hidden md:block md:w-[48%] xl:w-[38%] md:my-40 lg:my-0">
+            <img class="w-full object-cover h-2/3" src="./assets/facebook_cover_photo_2.png" alt="banner del e-commerce con diamantes">
+            <img class="w-full object-cover h-1/3" src="https://s1.elespanol.com/2023/06/08/vivir/salud-mental/769933690_233804290_1706x960.jpg" alt="mujer con gafas oscuras sonriente">
+        </aside>
+        <section class="flex flex-wrap justify-center md:w-full md:ml-4 lg:ml-8">
+            <div class="my-12">
+                <div class="flex flex-wrap text-center justify-center gap-2 bg-gray-100 bg-opacity-40 rounded-md p-4 md:relative">
+                    <h2 class="font-extrabold text-2xl italic bg-[#B3C8CF] rounded-md px-8 py-2 md:absolute top-4 right-12 border border-[#E5DDC5]">Tu e-commerce de confianza!</h2>
+                    <p class="shadow-[0_2px_10px_5px_#B3C8CF] text-lg bg-[#ffffff] bg-opacity-70 rounded-md my-4 p-10">¡Bienvenido a nuestro eCommerce de zapatillas deportivas unisex!
+
+                        En nuestro sitio web, encontrarás una amplia variedad de zapatillas deportivas diseñadas para todos, sin importar el género. Desde correr en el parque hasta entrenar en el gimnasio, nuestras zapatillas están diseñadas para brindar comodidad, estilo y rendimiento en cada paso.
+        
+                        Explora nuestra colección y descubre una amplia gama de estilos, colores y marcas líderes en la industria. Desde clásicos atemporales hasta las últimas tendencias de moda, tenemos el par perfecto para cada ocasión y cada estilo de vida.
+                    </p>
+                    <div class="shadow-[0_2px_10px_5px_#B3C8CF] md:flex bg-gray-100 bg-opacity-40 rounded-md mt-8">
+                        <p class="p-4 text-end bg-[#ffffff] bg-opacity-70">
+                            Nuestro compromiso con la calidad significa que cada par de zapatillas que ofrecemos está cuidadosamente seleccionado para brindarte la mejor experiencia de uso posible. Trabajamos con marcas reconocidas por su innovación, durabilidad y comodidad, para que puedas confiar en la calidad de cada producto que compras en nuestro sitio.
+                        </p>
+                        <img class="w-full md:w-[25%] object-cover" src="https://cdn.powered-by-nitrosell.com/store_images/13/3088/image_carousel/Rieker_L59L1-83%20SMALL%20BANNER.jpg" alt="figuras de deportistas en colores varios">
+                    </div>
+                    <p class="shadow-[0_2px_10px_5px_#B3C8CF] text-lg bg-[#ffffff] bg-opacity-70 rounded-md my-12 p-10">
+                        No esperes más, ¡explora nuestra tienda en línea y encuentra tus nuevas zapatillas deportivas unisex favoritas hoy mismo!
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 p-4 md:flex-row md:mb-16">
+                <div class="flex flex-wrap justify-center items-center w-full  text-center bg-[#B3C8CF] rounded-lg hover:shadow-[2px_2px_4px_0px_#000000] shadow-[2px_2px_4px_0px_#B3C8CF] p-4 md:w-1/2">
+                    <h3 class="font-bold text-lg md:text-base md:p-1 w-full bg-[#E5DDC5] rounded-lg h-[4rem] p-4 m-4 md:text-xl italic">Nuestros Productos!</h3>
+                    <a class="w-full self-center" href="./paginas/products.html">
+                        <img class="w-[30vh] h-[30vh] md:h-[22vh] w-full object-cover" src="https://thelinecl.b-cdn.net/img/products/AH8050-002-1_1024.png" alt="zapato deportivo negro">
+                    </a>
+                </div>
+                <div class="flex flex-wrap justify-center items-center w-full text-center bg-[#B3C8CF] rounded-lg hover:shadow-[2px_2px_4px_0px_#000000] shadow-[2px_2px_4px_0px_#B3C8CF] p-4 md:w-1/2">
+                    <h3 class="font-bold text-lg md:text-base md:p-1 w-full bg-[#E5DDC5] rounded-lg h-[4rem] p-4 m-4 md:text-xl">Registrate!</h3>
+                    <a class="w-full self-center" href="./paginas/contact.html">
+                        <img class="w-[30vh] h-[30vh] md:h-[22vh] w-full object-cover rounded-md" src="https://cdn-icons-png.flaticon.com/512/6367/6367242.png" alt="icono de correo">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>    
+    <footer class="w-full h-15 text-center font-extrabold bg-[#B3C8CF] p-4 md:text-lg ">
+        <p>&copy; All rigths reserved - Grupo #1 - MindHub Cohort-N°54</p>
+    </footer>
+
 </body>
+<style>
+    
+</style>
+
+<script type="module" src="./js/main.js"></script>
 </html>

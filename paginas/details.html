@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <style>
+        :root {
+            -color1: #B3C8CF;
+            -color2: #BED7DC;
+            -color3: #F1EEDC;
+            -color4: #E5DDC5;
+            -color5: #000000;
+            -color6: #ffffff;
+        }
+    </style>
+    <title>Details</title>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
+    <header class="flex flex-wrap bg-[#B3C8CF] w-full justify-between items-center md:relative pl-2 md:pb-12 bg-[url('https://img.freepik.com/foto-gratis/zapatilla-deporte-colores-pintando-pintura-aerosol-color-purpura_123827-23438.jpg')] bg-opacity-40 bg-no-repeat bg-cover bg-center">
+        <div class="flex justify-between items-center p-4 w-full lg:w-[80%] lg:ml-24">
+            <img class="w-[20vh] h-[20vh]" src="../assets/facebook_profile_image.png" alt="icono de la pagina">
+            <div class="flex flex-col items-center content-center ml-4">
+                <h1 class="font-bold text-4xl w-auto text-center mb-2 rounded-lg px-2 bg-[#F1EEDC]">NAIKI</h1>
+                <h3 class="italic text-sm text-center rounded-md bg-[#B3C8CF]">El mejor catálogo de zapatillas, a un click de distancia.</h3>
+            </div>
+        </div>
+        <nav class="flex flex-col mb-2 items-center gap-2 md:flex-row md:justify-end md:absolute  md:-bottom-6 md:right-2 md:w-1/2 px-4 w-full" >
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="../index.html">Home</a>
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="./products.html">Products</a>
+            <a class="w-[30vw] md:w-[25vw] lg:w-[18vw] rounded-md bg-[#F1EEDC] text-lg font-bold px-6 py-2 text-center" href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="grow flex flex-wrap min-h-full bg-[#F1EEDC] pb-12 justify-center items-center" id="main">
+        
+
+    </main>
+    <footer class="w-full text-center font-extrabold bg-[#B3C8CF] p-4 md:text-lg ">
+        <p>&copy; All rigths reserved - Grupo #1 - MindHub Cohort-N°54</p>
+    </footer>
+
+    <script  src="../js/zapatillas.js"></script>
+    <script src="../js/details.js"></script>
+    <!-- <style>
+        * {
+            border: 1px solid red;
+        }
+    </style> -->
     
 </body>
 </html>

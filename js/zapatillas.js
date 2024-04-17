@@ -183,7 +183,7 @@ let zapatillas = {
       "price": 150.00,
       "image": "https://tcrunningco.com/cdn/shop/products/DJ6205-100-PHSLH000-2000_512x512.png?v=1672956848",
       "category": "Atletismo",
-      "color": "Verde/Negro",
+      "color": "Perla/Rosa",
       "sizes": ["US 7", "US 8", "US 9", "US 10"],
       "cantidad":  10
     },

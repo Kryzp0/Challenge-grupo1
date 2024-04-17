@@ -70,7 +70,7 @@ let renderCheckbox = (array, contenedor) => {
 }
 
 let crearTarjeta = objeto => `<div class="flex flex-col relative bg-[#B3C8CF] text-gray-300 w-52 h-96 rounded-2xl overflow-hidden items-center">
-<img class=" w-full h-28 rounded object-cover" src=${objeto.image}>
+<img class="w-full h-28 rounded object-cover" src="${objeto.image}">
 <div class="px-4 py-6 flex flex-col items-center justify-between">    
 <h3 class="text-lg mb-2 text-[#000000] text-center">${objeto.name}</h3>
 <p class="text-sm text-[#000000] line-clamp-4">${objeto.category}</p>

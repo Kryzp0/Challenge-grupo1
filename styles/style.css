@@ -13,5 +13,9 @@
   .cart.open {
     right: 0;
   }
+
+  header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
   
   

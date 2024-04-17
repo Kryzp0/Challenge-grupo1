@@ -17,7 +17,9 @@ function crearForm(){
         }
         else{
             formulario.innerHTML = ''
-            formulario.innerHTML = `<h1 class="h-[500px] text-3xl">¡El formulario se ha enviado con exito!</h1>`
+            formulario.innerHTML = `<div class="text-center"><h1 class="h-[250px] text-3xl">¡El formulario se ha enviado con exito!</h1>
+            <h2 class="h-[250px] text-3xl">¡Pronto nos contactaremos!</div>`
         }
     })
 }
+crearForm()
